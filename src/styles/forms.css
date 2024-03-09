@@ -1,0 +1,48 @@
+.container {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.forms {
+  width: 500px;
+  height: auto;
+  margin-top: -20px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+form h3 {
+  text-align: center;
+  margin: 0px;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  border: none;
+  height: 20px;
+}
+
+form button {
+  margin-top: 20px;
+  background-color: rgb(67, 76, 115);
+  color: whitesmoke;
+}
