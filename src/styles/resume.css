@@ -42,6 +42,7 @@
 
 .education-info,
 .experience-info {
+  position: relative;
   display: flex;
   text-align: left;
   background-color: whitesmoke;
@@ -72,8 +73,20 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 }
 
-.divider {
-  height: 100%;
-  width: 1px;
-  background-color: black;
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  /* border: solid 1px red; */
+  color: red;
+  cursor: pointer; 
+  font-size: 0.7rem;
+}
+
+.delete-button:hover {
+  border-color: red;
+  transition: 0.3s;
+
 }

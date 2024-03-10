@@ -15,8 +15,22 @@ function App() {
       {
         school: "University of Space Science",
         degree: "Ph.D. in Aerospace Engineering",
-        eduStartDate: "201",
+        eduStartDate: "2017",
+        eduEndDate: "2021",
+        eduLocation: "Space City, Universe",
+      },
+      {
+        school: "University of Space Science",
+        degree: "M.S. in Aerospace Engineering",
+        eduStartDate: "2015",
         eduEndDate: "2017",
+        eduLocation: "Space City, Universe",
+      },
+      {
+        school: "University of Space Science",
+        degree: "B.S. in Mechanical Engineering",
+        eduStartDate: "2011",
+        eduEndDate: "2015",
         eduLocation: "Space City, Universe",
       },
     ],
@@ -24,11 +38,20 @@ function App() {
       {
         companyName: "SpaceX",
         title: "Senior Rocket Scientist",
-        expStartDate: "2017",
+        expStartDate: "2021",
         expEndDate: "Present",
         expLocation: "Mars Base Alpha, Mars",
         description:
           "Lead the design and development of next-generation rocket propulsion systems, including liquid fuel engines and reusable rocket stages.",
+      },
+      {
+        companyName: "NASA",
+        title: "Aerospace Engineer",
+        expStartDate: "2017",
+        expEndDate: "2021",
+        expLocation: "Kennedy Space Center, Earth",
+        description:
+          "Contributed to the development of the Space Launch System (SLS) by analyzing propulsion system performance and conducting simulations.",
       },
     ],
   });
@@ -78,6 +101,18 @@ function App() {
     setSubmittedData(updatedFormData);
   };
 
+  const onEducationDelete = (index) => {
+    const updatedEducation = [...submittedData.education];
+    updatedEducation.splice(index, 1);
+    setSubmittedData({ ...submittedData, education: updatedEducation });
+  };
+
+  const onExperienceDelete = (index) => {
+    const updatedExperience = [...submittedData.experience];
+    updatedExperience.splice(index, 1);
+    setSubmittedData({ ...submittedData, experience: updatedExperience });
+  };
+
   const resetResume = () => {
     setSubmittedData({
       name: "John Doe",
@@ -88,8 +123,22 @@ function App() {
         {
           school: "University of Space Science",
           degree: "Ph.D. in Aerospace Engineering",
-          eduStartDate: "201",
+          eduStartDate: "2017",
+          eduEndDate: "2021",
+          eduLocation: "Space City, Universe",
+        },
+        {
+          school: "University of Space Science",
+          degree: "M.S. in Aerospace Engineering",
+          eduStartDate: "2015",
           eduEndDate: "2017",
+          eduLocation: "Space City, Universe",
+        },
+        {
+          school: "University of Space Science",
+          degree: "B.S. in Mechanical Engineering",
+          eduStartDate: "2011",
+          eduEndDate: "2015",
           eduLocation: "Space City, Universe",
         },
       ],
@@ -97,11 +146,20 @@ function App() {
         {
           companyName: "SpaceX",
           title: "Senior Rocket Scientist",
-          expStartDate: "2017",
+          expStartDate: "2021",
           expEndDate: "Present",
           expLocation: "Mars Base Alpha, Mars",
           description:
             "Lead the design and development of next-generation rocket propulsion systems, including liquid fuel engines and reusable rocket stages.",
+        },
+        {
+          companyName: "NASA",
+          title: "Aerospace Engineer",
+          expStartDate: "2017",
+          expEndDate: "2021",
+          expLocation: "Kennedy Space Center, Earth",
+          description:
+            "Contributed to the development of the Space Launch System (SLS) by analyzing propulsion system performance and conducting simulations.",
         },
       ],
     });
@@ -114,7 +172,12 @@ function App() {
         <EducationForm onSubmit={handleEducationSubmit} />
         <ExperienceForm onSubmit={handleExperienceSubmit} />
       </div>
-      <Resume formData={submittedData} onClick={resetResume} />
+      <Resume
+        formData={submittedData}
+        onClick={resetResume}
+        onEducationDelete={onEducationDelete}
+        onExperienceDelete={onExperienceDelete}
+      />
     </div>
   );
 }

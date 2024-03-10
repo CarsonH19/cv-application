@@ -1,4 +1,4 @@
-function Resume({ formData, onClick }) {
+function Resume({ formData, onClick, onEducationDelete, onExperienceDelete }) {
   return (
     <div>
       <div className="resume">
@@ -6,7 +6,7 @@ function Resume({ formData, onClick }) {
           <h1>{formData.name}</h1>
           <div className="header-info">
             <p>
-            <i class="ri-mail-fill"></i> {formData.email}
+              <i className="ri-mail-fill"></i> {formData.email}
             </p>
             <p>
               <i className="ri-phone-fill"></i> {formData.number}
@@ -22,6 +22,7 @@ function Resume({ formData, onClick }) {
             <h2>Education</h2>
             {formData.education.map((edu, index) => (
               <div className="education-info" key={index}>
+                <button className="delete-button" onClick={() => onEducationDelete(index)}>X</button>
                 <div className="left-info">
                   <p>
                     {edu.eduStartDate} - {edu.eduEndDate}
@@ -42,6 +43,7 @@ function Resume({ formData, onClick }) {
             <h2>Experience</h2>
             {formData.experience.map((exp, index) => (
               <div className="experience-info" key={index}>
+                <button className="delete-button" onClick={() => onExperienceDelete(index)}>X</button>
                 <div className="left-info">
                   <p>
                     {exp.expStartDate} - {exp.expEndDate}
