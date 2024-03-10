@@ -21,21 +21,21 @@ function ExperienceForm({ onSubmit }) {
       <label htmlFor="exp-start-date">Start Date</label>
       <input
         type="text"
-        name="exp-start-date"
+        name="expStartDate"
         id="exp-start-date"
         placeholder="Enter Start Date"
       />
       <label htmlFor="exp-end-date">End Date</label>
       <input
         type="text"
-        name="exp-end-date"
+        name="expEndDate"
         id="exp-end-date"
         placeholder="Enter End Date"
       />
       <label htmlFor="exp-location">Location</label>
       <input
         type="text"
-        name="exp-location"
+        name="expLocation"
         id="exp-location"
         placeholder="Mars Base Alpha, Mars"
       />

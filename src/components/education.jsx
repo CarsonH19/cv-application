@@ -9,7 +9,6 @@ function EducationForm({ onSubmit }) {
         type="text"
         name="school"
         id="school"
-        
         placeholder="University of Space Science"
       />
       <label htmlFor="degree">Degree</label>
@@ -17,31 +16,27 @@ function EducationForm({ onSubmit }) {
         type="text"
         name="degree"
         id="degree"
-        
         placeholder="Aerospace Engineering"
       />
-      <label htmlFor="edu-start-date">Start Date</label>
+      <label htmlFor="eduStartDate">Start Date</label>
       <input
         type="text"
-        name="edu-start-date"
+        name="eduStartDate"
         id="edu-start-date"
-        
         placeholder="Enter Start Date"
       />
-      <label htmlFor="edu-end-date">End Date</label>
+      <label htmlFor="eduEndDate">End Date</label>
       <input
         type="text"
-        name="edu-end-date"
+        name="eduEndDate"
         id="edu-end-date"
-        
         placeholder="Enter End Date"
       />
-      <label htmlFor="edu-location">Location</label>
+      <label htmlFor="eduLocation">Location</label>
       <input
         type="text"
-        name="edu-location"
+        name="eduLocation"
         id="edu-location"
-        
         placeholder="Space City, Universe"
       />
       <button type="submit">Add</button>
